@@ -1,0 +1,124 @@
+{
+  "name": "Gsd",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "i": "react-native run-ios --simulator \"iPhone 7 Plus\"",
+    "i5": "react-native run-ios --simulator \"iPhone 5s\"",
+    "i8": "react-native run-ios --simulator \"iPhone 8\"",
+    "a": "react-native run-android",
+    "menu": "adb shell input keyevent 82",
+    "reset": "react-native start --reset-cache",
+    "test": "jest",
+    "lint": "eslint --fix AppModules/**/*.js",
+    "format": "prettier --write AppModules/**/*.js",
+    "base_format": "prettier --write BaseModule/**/*.js",
+    "postinstall": "jetifier -r",
+    "reactotron": "adb reverse tcp:9090 tcp:9090"
+  },
+  "rnpm": {
+    "assets": [
+      "resources/fonts"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
+    "@react-native-community/masked-view": "^0.1.7",
+    "@react-native-community/netinfo": "^5.5.1",
+    "@react-native-firebase/app": "^6.3.4",
+    "@react-native-firebase/auth": "^6.3.4",
+    "@react-native-firebase/messaging": "^6.3.4",
+    "axios": "^0.19.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "prop-types": "15.7.2",
+    "query-string": "6.8.3",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-code-push": "5.7.0",
+    "react-native-device-info": "4.0.1",
+    "react-native-fast-image": "7.0.2",
+    "react-native-flash-message": "0.1.15",
+    "react-native-gesture-handler": "1.4.1",
+    "react-native-image-picker": "0.28.1",
+    "react-native-keyboard-aware-scroll-view": "0.9.1",
+    "react-native-localization": "2.1.6",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-modal": "^11.5.4",
+    "react-native-permissions": "1.1.1",
+    "react-native-ratings": "6.5.0",
+    "react-native-reanimated": "1.2.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "2.2.0",
+    "react-native-splash-screen": "3.2.0",
+    "react-native-swipe-list-view": "2.0.3",
+    "react-native-vector-icons": "6.6.0",
+    "react-native-version-number": "0.3.6",
+    "react-native-webview": "7.5.1",
+    "react-navigation": "4.2.2",
+    "react-navigation-drawer": "2.4.2",
+    "react-navigation-hooks": "1.1.0",
+    "react-navigation-stack": "2.2.2",
+    "react-navigation-tabs": "2.8.2",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0",
+    "redux-logger": "3.0.6",
+    "redux-persist": "5.9.1",
+    "redux-saga": "0.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.6",
+    "@babel/runtime": "7.8.4",
+    "@react-native-community/eslint-config": "0.0.5",
+    "@types/jest": "25.1.3",
+    "babel-jest": "24.9.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.18.3",
+    "husky": "4.2.3",
+    "jest": "24.9.0",
+    "jest-enzyme": "7.1.2",
+    "jetifier": "^1.6.5",
+    "lint-staged": "10.0.8",
+    "lodash": "4.17.15",
+    "metro-react-native-babel-preset": "0.56.4",
+    "prettier": "1.19.1",
+    "react-dom": "16.10.2",
+    "react-test-renderer": "16.9.0",
+    "reactotron-react-native": "3.6.5",
+    "reactotron-redux": "3.1.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "./setup-tests.js"
+    ],
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "html"
+    ]
+  }
+}
