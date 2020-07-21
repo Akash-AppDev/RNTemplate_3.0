@@ -98,7 +98,7 @@
     "jest-enzyme": "7.1.2",
     "jetifier": "^1.6.5",
     "lint-staged": "10.0.8",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "metro-react-native-babel-preset": "0.56.4",
     "prettier": "1.19.1",
     "react-dom": "16.10.2",
